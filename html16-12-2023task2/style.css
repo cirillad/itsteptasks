@@ -1,0 +1,24 @@
+ul
+{
+    font-family: Arial, sans-serif;
+    list-style-position: inside;
+    list-style-image: url(icons/unchecked_16.png);
+}
+li
+{
+    padding: 10px;
+    padding-left: 30px;
+}
+li:nth-child(odd)
+{
+    background-color: rgb(123, 174, 194);
+}
+li:nth-child(even)
+{
+    background-color: rgb(142, 211, 214);
+}
+body
+{
+    width: 70%;
+    margin: auto;
+}
