@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        hr {    
+            width: 95%;
+            padding: 0;
+        }
+        
+        .social-icons {
+            text-align: center;
+            margin-top: 55px;
+        }
+
+        .social-icons img {
+            max-width: 15%;
+            height: auto;
+            margin-left: 20px;
+            filter: grayscale(1);
+            transition: filter 0.3s;
+            cursor: pointer;
+        }
+
+        .social-icons img:hover {
+            filter: grayscale(0);
+        }
+
+        .home-text:hover,
+        .about-text:hover,
+        .gallery-text:hover,
+        .news-text:hover,
+        .blog-text:hover,
+        .faq-text:hover,
+        .contacts-text:hover,
+        .privacy-text:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div style="background-color:rgb(31, 87, 134); height: 200px; margin: 20px;">
+        <div style="display: flex;">
+            <div style="padding-left: 30px; margin: 40px; margin-bottom: 10px;">
+                <span class="home-text">Home</span><br>
+                <span class="about-text">About</span><br>
+                <span class="gallery-text">Gallery</span><br>
+                <span class="news-text">News</span><br>
+            </div>
+            <div style="padding-left: 30px; margin: 40px; margin-left: 20vw; margin-bottom: 10px;">
+                <span class="blog-text">Blog</span><br>
+                <span class="faq-text">FAQ</span><br>
+                <span class="contacts-text">Contacts</span><br>
+                <span class="privacy-text">Privacy</span><br>
+            </div>
+            <div class="social-icons">
+                <img src="./images/fb_gray.png" alt="" data-hover="./images/fb.png">
+                <img src="./images/insta_gray.png" alt="" data-hover="./images/insta.png">
+                <img src="./images/youtube_gray.png" alt="" data-hover="./images/youtube.png">
+            </div>
+        </div>
+        <hr>
+        <p style="text-align: center; font-size: small;">Copyright © Company 2018 - 2019</p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const icons = document.querySelectorAll(".social-icons img");
+
+            icons.forEach((icon) => {
+                const originalSrc = icon.src;
+                const hoverSrc = icon.getAttribute("data-hover");
+
+                icon.addEventListener("mouseover", function () {
+                    icon.src = hoverSrc;
+                });
+
+                icon.addEventListener("mouseout", function () {
+                    icon.src = originalSrc;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
